@@ -7,8 +7,7 @@ prettify-pinyin will take your pinyin written with letters and numbers (i.e. 'ni
 ```
 var pinyin = require('prettify-pinyin');
 
-pinyin.prettify('ni3 hao3');    // => 'nǐ hǎo'
-pinyin.prettify('zhong1 guo2'); // => 'zhōng guó'
+pinyin.prettify("ma1 ma2 ma3 ma4 ma"); // => mā má mǎ mà ma
 
 ```
 
