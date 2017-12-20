@@ -15,7 +15,13 @@ var replacements = {
   'u': ['ū', 'ú', 'ǔ', 'ù'],
   'i': ['ī', 'í', 'ǐ', 'ì'],
   'o': ['ō', 'ó', 'ǒ', 'ò'],
-  'ü': ['ǖ', 'ǘ', 'ǚ', 'ǜ']
+  'ü': ['ǖ', 'ǘ', 'ǚ', 'ǜ'],
+  'A': ['Ā', 'Á', 'Ă', 'À'],
+  'E': ['Ē', 'É', 'Ĕ', 'È'],
+  'U': ['Ū', 'Ú', 'Ŭ', 'Ù'],
+  'I': ['Ī', 'Í', 'Ĭ', 'Ì'],
+  'O': ['Ō', 'Ó', 'Ŏ', 'Ò'],
+  'Ü': ['Ǖ', 'Ǘ', 'Ǚ', 'Ǜ']
 };
 
 var medials = ['i', 'u', 'ü'];
@@ -32,7 +38,7 @@ var prettify = function(str){
     if(isNaN(tone)) {
       continue;
     }
-    
+
     if (tone <= 0 || tone > 5) {
       console.error('invalid tone number:', tone, 'in', syllable);
     } else if (tone === 5){
@@ -58,7 +64,7 @@ var prettify = function(str){
           syllables[i] = replaced.slice(0, replaced.length - 1);
           break;
         }
-      }  
+      }
     }
 
   }
@@ -66,5 +72,3 @@ var prettify = function(str){
 };
 
 module.exports.prettify = prettify;
-
-
